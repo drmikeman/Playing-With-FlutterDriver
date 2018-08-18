@@ -9,3 +9,10 @@ SerializableFinder showProducts = find.text(SHOW_PRODUCTS);
 SerializableFinder firstStore = find.byValueKey(getStringKeyForListItem(STORE_TYPE, 0));
 
 SerializableFinder firstProduct = find.byValueKey(getStringKeyForListItem(PRODUCT_TYPE, 0));
+SerializableFinder secondProduct = find.byValueKey(getStringKeyForListItem(PRODUCT_TYPE, 1));
+
+String rowFinder(int index) {
+  return "row_$index";
+}
+SerializableFinder firstRow = find.byValueKey(rowFinder(0));
+SerializableFinder secondRow = find.byValueKey(rowFinder(1));

@@ -41,6 +41,18 @@ void main() {
 
     });
 
+    test('Verify products list', () async {
+      await driver.tap(showProducts);
+      await driver.waitFor(firstProduct); //we have first item
+      await driver.waitFor(secondProduct); //we have second item
+
+      var firstRowText = await driver.getText(firstRow);
+      expect(firstRowText, equals('Laptop'));
+
+      var secondRowText = await driver.getText(secondRow);
+      expect(secondRowText, equals('Monitor'));
+    });
+
   });
 
 

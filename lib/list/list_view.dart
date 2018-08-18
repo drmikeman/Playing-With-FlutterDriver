@@ -32,7 +32,7 @@ class ItemsListView extends StatelessWidget {
       child: new Container (
         padding: const EdgeInsets.all(2.0),
         color: new Color(0x33000000),
-        child: new Text(item),
+        child: new Text(item, key: new Key("row_$index")),
       ),
     );
   }
